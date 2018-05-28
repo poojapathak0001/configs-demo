@@ -1,6 +1,10 @@
 pipeline {
 	agent any
 	
+	parameters {
+        string(name: 'Greeting', defaultValue: 'Hello', description: 'How should I greet the world?')
+    }
+	
 	tools {
 		maven 'Maven'
 		jdk 'java8'
@@ -19,6 +23,7 @@ pipeline {
 		stage ('Build') {
 			steps {
 				sh 'mvn clean install'
+				sh 'echo "${params.Greeting} World!"'
 			}
 			
 			post {
