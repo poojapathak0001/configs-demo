@@ -28,7 +28,7 @@ pipeline {
 			
 			post {
 				success {
-					junit 'exclude-resources-demo/target/surefire-reports/*.xml'
+					junit '*/target/surefire-reports/*.xml'
 				}
 			}
 		}
