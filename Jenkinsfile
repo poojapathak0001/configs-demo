@@ -23,7 +23,7 @@ pipeline {
 		stage ('Build') {
 			steps {
 				sh 'mvn clean install'
-				sh 'echo "${params.Greeting} World!"'
+				echo "${params.Greeting} World!"
 			}
 			
 			post {
