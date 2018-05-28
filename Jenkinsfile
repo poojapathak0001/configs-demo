@@ -9,10 +9,10 @@ pipeline {
 	stages {
 		stage ('Initialize') {
 			steps {
-				bat '''
-					echo "Path = $Path"
-					echo "M2_HOME = $M2_HOME"
-				'''
+				
+				sh	'echo "Path = $Path"'
+				sh	'echo "M2_HOME = $M2_HOME"'
+				
 			}
 		}
 		
