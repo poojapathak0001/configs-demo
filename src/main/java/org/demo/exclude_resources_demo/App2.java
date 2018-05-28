@@ -4,17 +4,17 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
-import java.util.Scanner;
+//import java.util.Scanner;
 public class App2 {
   public static void main(String[] args) {
 
 	Properties prop = new Properties();
 	InputStream input = null;
-	Scanner sc = new Scanner(System.in);
+	//Scanner sc = new Scanner(System.in);
 	try {
 
 		input = new FileInputStream("./src/main/resources/config.properties");
-		System.out.println(sc.next());
+		//System.out.println(sc.next());
 		// load a properties file
 		prop.load(input);
 
