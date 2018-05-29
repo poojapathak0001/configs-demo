@@ -13,7 +13,7 @@ public class App2 {
 	//Scanner sc = new Scanner(System.in);
 	try {
 
-		input = new FileInputStream("gs://cdp-gcp-script/config.properties");
+		input = new FileInputStream("\\D:\\config\\config.properties");
 		//System.out.println(sc.next());
 		// load a properties file
 		prop.load(input);

@@ -18,7 +18,7 @@
   <build>
     <resources>
         <resource>
-            <directory>gs://cdp-gcp-script/config.properties</directory>
+            <directory>\D:\config</directory>
             <excludes>
                 <exclude>*.properties</exclude>
             </excludes>
