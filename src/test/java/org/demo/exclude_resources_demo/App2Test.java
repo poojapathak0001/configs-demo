@@ -18,7 +18,7 @@ public class App2Test {
 	public void test() {
 		
 			try {
-				input = new FileInputStream("./src/main/resources/config.properties");
+				input = new FileInputStream("\\D:\\config\\config.properties");
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

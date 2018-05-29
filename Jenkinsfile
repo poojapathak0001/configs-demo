@@ -15,14 +15,14 @@ pipeline {
 			steps {
 				
 				sh	'echo "Path = $Path"'
-				sh	'echo "M2_HOME = $M2_HOME"'
+				sh	'echo "M2_HOME = $MAVEN_HOME"'
 				
 			}
 		}
 		
 		stage ('Build') {
 			steps {
-				sh 'mvn clean install'
+				sh 'mvn clean install test'
 				echo "${params.Greeting} World!"
 			}
 			
