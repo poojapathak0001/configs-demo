@@ -18,7 +18,7 @@ public class App2Test {
 	public void test() {
 		
 			try {
-				input = new FileInputStream("\\D:\\config\\config.properties");
+				input = new FileInputStream("gs://cdp-gcp-script/config.properties");
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
