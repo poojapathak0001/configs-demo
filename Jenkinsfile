@@ -14,6 +14,7 @@ pipeline {
 		stage ('Initialize') {
 			steps {
 				sh 'chmod 777 cdp-bt-init-setup.sh'
+				sh 'chmod 777 cdp-dev.config'
 				sh './cdp-bt-init-setup.sh'
 				sh 'chmod 777 script.sh'
 				sh './script.sh'
