@@ -13,7 +13,7 @@ pipeline {
 	stages {
 		stage ('Initialize') {
 			steps {
-				sh 'chmod 777'
+				sh 'chmod 777 script.sh'
 				sh './script.sh'
 				sh	'echo "Path = $Path"'
 				sh	'echo "M2_HOME = $MAVEN_HOME"'
