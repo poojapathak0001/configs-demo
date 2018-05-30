@@ -29,7 +29,6 @@ pipeline {
 			post {
 				success {
 					junit 'target/surefire-reports/*.xml'
-					gsutil gs://cdp-demo-205604-jenkins-artifacts/
 				}
 			}
 		}
