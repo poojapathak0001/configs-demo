@@ -13,11 +13,11 @@ public class App {
 
 	try {
 
-		output = new FileOutputStream("\\D:\\config\\config.properties");
+		output = new FileOutputStream("src/main/resources/config.properties");
 
 		// set the properties value
 		prop.setProperty("database", "localhost");
-		prop.setProperty("dbuser", "mkyong");
+		prop.setProperty("dbuser", "pooh");
 		prop.setProperty("dbpassword", "password");
 
 		// save properties to project root folder

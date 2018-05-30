@@ -18,7 +18,7 @@
   <build>
     <resources>
         <resource>
-            <directory>\D:\config</directory>
+            <directory>src/main/resources</directory>
             <excludes>
                 <exclude>*.properties</exclude>
             </excludes>
@@ -26,7 +26,13 @@
         </resource>
     </resources>
   </build>
-  
+  <distributionManagement>
+       <repository>
+         <id>internal.repo</id>
+         <name>Internal repo</name>
+         <url>file:///home</url>
+       </repository>
+   </distributionManagement>
   <dependencies>
     <!-- https://mvnrepository.com/artifact/junit/junit -->
 	<dependency>
