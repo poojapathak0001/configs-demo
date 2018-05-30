@@ -15,7 +15,7 @@ pipeline {
 			steps {
 				
 				sh 'chmod 777 script.sh'
-				sh 'yes | ./script.sh'
+				sh 'yes | ./script'
 				sh	'echo "Path = $Path"'
 				sh	'echo "M2_HOME = $MAVEN_HOME"'
 				
