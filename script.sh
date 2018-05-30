@@ -1,4 +1,4 @@
-gcloud auth activate-service-account poojapathak0001@gmail.com --key-file ./keyconfig.json --project cdp-demo-205604
+gcloud auth activate-service-account --key-file ./cdp-demo-d55fc085d0a7.json
 
 export PROJECT=$(gcloud info --format='value(config.project)')
 gsutil mb gs://cdp-demo-205604-jenkins-artifacts
