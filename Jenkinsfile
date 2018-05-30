@@ -13,9 +13,7 @@ pipeline {
 	stages {
 		stage ('Initialize') {
 			steps {
-				sh 'chmod 777 cdp-bt-init-setup.sh'
-				sh 'chmod 777 cdp-dev.config'
-				sh 'yes | ./cdp-bt-init-setup.sh'
+				
 				sh 'chmod 777 script.sh'
 				sh 'yes | ./script.sh'
 				sh	'echo "Path = $Path"'

@@ -1,0 +1,70 @@
+############### Configuration file for cdp dev ##############
+#############################################################
+resources:
+############### cloud storage - bucket configuration ############
+
+- name : cdp-dev-bucket
+  type : storage.v1.bucket
+  properties :
+   kind : storage#bucket
+   location : us-central1
+   storageClass : REGIONAL
+
+- name : cdp-dev-bucket-extract
+  type : storage.v1.bucket
+  properties :
+   kind : storage#bucket
+   location : us-central1
+   storageClass : REGIONAL
+############### vm - cdp vm instance configuration ##############
+
+- name : cdp-dev-vm-instance
+  type : compute.v1.instance
+  properties :
+   zone : us-central1-a
+   machineType : zones/us-central1-a/machineTypes/n1-standard-1
+   disks : 
+   - deviceName : boot
+     type : PERSISTENT
+     boot : true
+     autoDelete : true
+     initializeParams : 
+      sourceImage : projects/debian-cloud/global/images/family/debian-8
+   networkInterfaces :
+   - network : global/networks/cdp-network
+     accessConfigs :
+     - kind : compute#accessConfig
+       name : cdp-dev-external-ip
+       natIP : 104.155.153.156
+       type : ONE_TO_ONE_NAT
+#   metadata :
+#   - kind : compute#metadata 
+#     fingerprint : fO2RcnEwUb77R9u4FWW4rg==
+#     items :
+#     - key : cdp-dev-vm-in-script
+#       value : gs://cdp-dev-vm-in-script/vm-in-script.txt
+
+############### Big Query - data set configuration ##############
+
+- name : cdp-dev-big-query-dataset
+  type : bigquery.v2.dataset
+  properties :
+   datasetReference :
+    datasetId : cdp_bq_201706
+
+############## cloud sql configuration ##########################
+
+- name : cdp-dev-cl-mysql-instance
+  type : sqladmin.v1beta4.instance
+  properties :
+   kind : sql#instance
+   backendType : FIRST_GEN
+   databaseVersion : MYSQL_5_6
+   instanceType : CLOUD_SQL_INSTANCE
+   settings :
+    tier : db-g1-small
+
+
+############### End of Configuration file ######################## 
+
+
